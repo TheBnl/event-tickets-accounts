@@ -1,0 +1,19 @@
+---
+Name: event-tickets-accounts
+After: 'event-tickets/*'
+---
+CalendarEvent_Controller:
+  extensions:
+    - 'Broarm\EventTickets\LoginStep'
+
+Broarm\EventTickets\Reservation:
+  has_one:
+    Member: 'Member'
+
+Broarm\EventTickets\SuccessController:
+  extensions:
+    - Broarm\EventTickets\SuccessControllerExtension
+
+Member:
+  extensions:
+    - Broarm\EventTickets\MemberExtension
