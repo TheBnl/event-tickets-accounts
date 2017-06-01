@@ -66,7 +66,7 @@ class LoginController extends CheckoutStepController
         $memberLoginForm = new MemberLoginForm($this, 'LoginForm');
 
         if (!Member::currentUserID()) {
-            $createAccountLabel = _t("MemberLoginForm.CREATE_ACCOUNT", 'Create account');
+            $createAccountLabel = _t('CreateAccountForm.CREATE_ACCOUNT', 'Create account');
             $memberLoginForm->Actions()->insertAfter('action_dologin', LiteralField::create(
                 'createAccount',
                 "<a class='button' href='{$this->getCreateAccountLink()}'>$createAccountLabel</a>"

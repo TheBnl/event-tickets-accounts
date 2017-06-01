@@ -36,14 +36,14 @@ class CreateAccountForm extends Form
     public function __construct(Controller $controller, $name)
     {
         $fields = new FieldList(array(
-            TextField::create('FirstName', 'FirstName'),
-            TextField::create('Surname', 'Surname'),
-            TextField::create('Email', 'Email'),
-            ConfirmedPasswordField::create('Password', 'Password'),
+            TextField::create('FirstName', _t('AttendeeField.FirstName', 'FirstName')),
+            TextField::create('Surname', _t('AttendeeField.Surname', 'Surname')),
+            TextField::create('Email', _t('AttendeeField.Email', 'Email')),
+            ConfirmedPasswordField::create('Password', _t('Member.PASSWORD', 'Password')),
         ));
 
         $actions = new FieldList(array(
-            new FormAction('createAccount', 'Create account')
+            new FormAction('createAccount', _t('CreateAccountForm.CREATE_ACCOUNT', 'Create account'))
         ));
 
         parent::__construct($controller, $name, $fields, $actions, Member::singleton()->getValidator());

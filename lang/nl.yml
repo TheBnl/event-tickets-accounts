@@ -4,3 +4,4 @@ nl:
     CONTINUE_GUEST: 'Ga door als gast'
   CreateAccountForm:
     GO_BACK: 'Ga terug'
+    CREATE_ACCOUNT: 'Account aanmaken'
