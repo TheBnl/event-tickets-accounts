@@ -5,6 +5,5 @@
 .travis.yml export-ignore
 CHANGELOG.md export-ignore
 CONTRIBUTING.md export-ignore
-README.md export-ignore
 tests export-ignore
 docs export-ignore
